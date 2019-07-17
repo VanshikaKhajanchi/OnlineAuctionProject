@@ -1,0 +1,166 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
+
+    <title>_BasicLayout</title>
+    <style>
+        #navmenu {
+            height: 100px;
+        }
+
+        .navbar1 {
+            margin-top: 10px;
+            padding-right: 50px;
+            float: left;
+        }
+
+        .nav_Tabs :hover {
+            color: white;
+            font-size: 20px;
+            padding-right: 15px;
+            margin-top: -12px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:white
+        }
+
+        #logo {
+            margin-top: 400px;
+            margin-right:30px;
+        }
+
+        .nav navbar-nav:hover {
+            color: white;
+        }
+
+        .navbar1:hover{
+            color:white;
+        }
+
+        #mySidenav  {
+            margin-top: 80px;
+            color:white;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+        .sidenav1 span:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav a:hover {
+            color: white;
+        }
+
+        .sidenav .closebtn  {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+           
+    </style>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</head>
+<body>
+    @RenderBody()
+    <header>
+
+        @* ................................................................................................................................... *@
+
+
+        @* SIdeNAV *@
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+
+
+
+
+
+        <div class="navbar navbar-inverse navbar-fixed-top" id="navmenu">
+            <div class="navbar1">
+                <ul class="nav navbar-nav" style="margin:20px;padding-top:20px">
+                    <li>
+                        <a class="nav_Tabs" >
+                            <span style="font-size:20px;cursor:pointer;color:grey;"
+                                  class="sidenav1" onclick="openNav()">
+                                &#9776;
+                                MENU
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Login" class="nav_Tabs">
+                            <span class="glyphicon glyphicon-user"></span>Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Signup" class="nav_Tabs">
+                            <span class="glyphicon glyphicon-user"></span>Register
+                        </a>
+                    </li>
+                </ul>
+                <br />
+            </div>
+            <div id="logo" style="margin-top:20px;float:right">
+                <h1 style="color:white;font-size:60px;">
+                    αятνιℓℓα
+                </h1>
+            </div>
+        </div>
+
+    </header>
+
+    <hr />
+    <footer>
+        @*Copyright fgdfgdfgfsdfgfgdfhth*@
+
+    </footer>
+    <div>
+    </div>
+</body>
+</html>

@@ -8,7 +8,7 @@ namespace onlineauctionmvc.Models
     public class item
     {
 
-        public int itemid { get; set; }
+        public int ItemID { get; set; }
 
         public string itemname { get; set; }
 

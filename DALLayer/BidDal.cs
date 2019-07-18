@@ -24,11 +24,11 @@ namespace DALLayer
                 SqlCommand cmd = new SqlCommand("sp_InsertBidTable", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@BidID", bid.Bid);
-                cmd.Parameters.AddWithValue("@SellerID", bid.Sellerid);
-                cmd.Parameters.AddWithValue("@BuyerID", bid.Buyerid);
-                cmd.Parameters.AddWithValue("@ItemID", bid.Itemid);
-                cmd.Parameters.AddWithValue("@BidPrice", bid.Bidprice);
+                cmd.Parameters.AddWithValue("@BidID", bid.BidID);
+                cmd.Parameters.AddWithValue("@SellerID", bid.SellerID);
+                cmd.Parameters.AddWithValue("@BuyerID", bid.BuyerID);
+                cmd.Parameters.AddWithValue("@ItemID", bid.ItemID);
+                cmd.Parameters.AddWithValue("@BidPrice", bid.BidPrice);
                 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -54,6 +54,7 @@ namespace DALLayer
             }
             return status;
         }
+
         public bool UpdateBid(Bidbal bid)
         {
             bool status = false;
@@ -66,11 +67,11 @@ namespace DALLayer
                 SqlCommand cmd = new SqlCommand("sp_UpdateBidTable", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@BidID", bid.Bid);
-                cmd.Parameters.AddWithValue("@SellerID", bid.Sellerid);
-                cmd.Parameters.AddWithValue("@BuyerID", bid.Buyerid);
-                cmd.Parameters.AddWithValue("@ItemID", bid.Itemid);
-                cmd.Parameters.AddWithValue("@BidPrice", bid.Bidprice);
+                cmd.Parameters.AddWithValue("@BidID", bid.BidID);
+                cmd.Parameters.AddWithValue("@SellerID", bid.SellerID);
+                cmd.Parameters.AddWithValue("@BuyerID", bid.BuyerID);
+                cmd.Parameters.AddWithValue("@ItemID", bid.ItemID);
+                cmd.Parameters.AddWithValue("@BidPrice", bid.BidPrice);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -96,6 +97,7 @@ namespace DALLayer
             }
             return status;
         }
+
         public bool DeleteBid(Bidbal bid)
         {
             bool status = false;
@@ -108,7 +110,7 @@ namespace DALLayer
                 SqlCommand cmd = new SqlCommand("sp_DeleteBidTable", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@BidID", bid.Bid);
+                cmd.Parameters.AddWithValue("@BidID", bid.BidID);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i < 0)

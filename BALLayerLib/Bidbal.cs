@@ -10,7 +10,7 @@ namespace BALLayerLib
     {
         private int bidID;
 
-        public int Bid
+        public int BidID
         {
             get { return bidID; }
             set {
@@ -38,16 +38,16 @@ namespace BALLayerLib
         }
 
 
-        private int sellerID;
+        private int sellerid;
 
-        public int Sellerid
+        public int SellerID
         {
-            get { return sellerID; }
+            get { return sellerid; }
             set {
                 try
                 {
 
-                    sellerID = value;
+                    sellerid = value;
                 }
 
                 catch (ArgumentNullException)
@@ -67,16 +67,16 @@ namespace BALLayerLib
             }
         }
 
-        private int buyerID;
+        private int buyerid;
 
-        public int Buyerid
+        public int BuyerID
         {
-            get { return buyerID; }
+            get { return buyerid; }
             set {
                 try
                 {
 
-                    buyerID = value;
+                    buyerid = value;
                 }
 
                 catch (ArgumentNullException)
@@ -96,16 +96,16 @@ namespace BALLayerLib
             }
         }
 
-        private int itemID;
+        private int itemid;
 
-        public int Itemid
+        public int ItemID
         {
-            get { return itemID; }
+            get { return itemid; }
             set {
                 try
                 {
 
-                    itemID = value;
+                    itemid = value;
                 }
 
                 catch (ArgumentNullException)
@@ -128,7 +128,7 @@ namespace BALLayerLib
 
         private int bidPrice;
 
-        public int Bidprice
+        public int BidPrice
         {
             get { return bidPrice; }
             set {

@@ -8,17 +8,17 @@ namespace onlineauctionmvc.Models
     public class Transaction
     {
 
-        public int transid { get; set; }
+        public int TransID { get; set; }
 
-        public int selleraccount { get; set; }
+        public int SellerAccount { get; set; }
 
-        public int buyeraccount { get; set; }
+        public int BuyerAccount { get; set; }
 
-        public int amount { get; set; }
+        public int Amount { get; set; }
 
-        public DateTime transtime { get; set; }
+        public DateTime Transtime { get; set; }
 
-        private DateTime transdate { get; set; }
+        private DateTime Transdate { get; set; }
 
         public int itemid { get; set; }
 

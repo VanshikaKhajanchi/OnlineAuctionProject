@@ -35,7 +35,7 @@ namespace DALLayer
                 cmd.Parameters.AddWithValue("@City", user.City);
                 cmd.Parameters.AddWithValue("@Country", user.Country);
                 cmd.Parameters.AddWithValue("@Zip", user.Zip);
-                cmd.Parameters.AddWithValue("@Date_created", user.Date_created);
+                //cmd.Parameters.AddWithValue("@Date_created", user.Date_created);
                 cmd.Parameters.AddWithValue("@AadharNumber", user.AadharNumber);
                 cmd.Parameters.AddWithValue("@PassportNumber", user.PassportNumber);
 
@@ -156,6 +156,44 @@ namespace DALLayer
             }
             return status;
         }
+
+        public bool ValidateUser(UserBal user)
+        {
+            bool status = false;
+            SqlConnection cn = new SqlConnection
+                (ConfigurationManager.ConnectionStrings["onlineauctionstrings"].ConnectionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("sp_ValidateUser", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Email", user.Email);
+                cmd.Parameters.AddWithValue("@Password", user.Password);
+                cn.Open();  
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                if (dt.Rows.Count>0)
+                {
+                    status = true;
+                }
+                //if (dr.HasRows)
+                //{
+                //    status = true;
+                //}
+            
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return status; 
+        }
+
     }
 }
     

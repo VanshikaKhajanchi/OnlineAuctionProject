@@ -8,10 +8,10 @@ namespace onlineauctionmvc.Models
     public class SubCategory
     {
 
-        public int subcategoryid { get; set; }
+        public int SubcategoryID { get; set; }
 
-        public int cid { get; set; }
+        public int CategoryID { get; set; }
 
-        public string  subcategoryname { get; set; }
+        public string  SubCategoryName { get; set; }
     }
 }

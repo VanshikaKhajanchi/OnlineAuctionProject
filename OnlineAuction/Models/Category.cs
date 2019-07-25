@@ -8,9 +8,9 @@ namespace onlineauctionmvc.Models
     public class Category
     {
 
-        public int cid { get; set; }
+        public int CategoryID { get; set; }
 
-        public int categoryname { get; set; }
+        public int CategoryName { get; set; }
 
         
     }

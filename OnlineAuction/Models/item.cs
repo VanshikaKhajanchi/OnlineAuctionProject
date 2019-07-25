@@ -10,21 +10,21 @@ namespace onlineauctionmvc.Models
 
         public int ItemID { get; set; }
 
-        public string itemname { get; set; }
+        public string ItemName { get; set; }
 
-        public int categoryid { get; set; }
+        public int CategoryID { get; set; }
 
-        public string discription { get; set; }
+        public string Description { get; set; }
 
-        public int sellerid { get; set; }
+        public int SellerID { get; set; }
 
-        public int buyerid { get; set; }
+        public int BuyerID { get; set; }
 
-        public int price { get; set; }
+        public int Price { get; set; }
 
-        public int auctionid { get; set; }
+        public int AuctionID { get; set; }
 
-        public int bidid { get; set; }
+        public int BidID { get; set; }
 
 
 

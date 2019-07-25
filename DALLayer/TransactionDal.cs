@@ -41,10 +41,6 @@ namespace DALLayer
                 {
                     status = true;
                 }
-
-
-
-
             }
             catch (Exception ex)
             {

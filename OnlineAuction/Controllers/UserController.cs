@@ -43,23 +43,6 @@ namespace OnlineAuction.Controllers
             ViewBag.data = status;
             return View();
         }
-
-        public ActionResult LoginUser()
-        {
-
-            return View();
-        }
-        [HttpPost]
-        public ActionResult LoginUser(User user)
-        {
-            UserBal bal = new UserBal();
-            UserDAL dAL = new UserDAL();
-            bal.Email = user.Email;
-            bal.Password = user.Password;
-            bool status = dAL.ValidateUser(bal);
-            ViewBag.data = status;
-            return View();
-        }
         public ActionResult Signup()
         {
 
@@ -88,6 +71,28 @@ namespace OnlineAuction.Controllers
             return View();
         }
 
+
+        public ActionResult LoginUser()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult LoginUser(User user)
+        {
+            UserBal bal = new UserBal();
+            UserDAL dAL = new UserDAL();
+            bal.Email = user.Email;
+            bal.Password = user.Password;
+            bool status = dAL.ValidateUser(bal);
+            ViewBag.data = status;
+            if (status == true)
+            { return RedirectToAction("UserProfile", "User"); }
+            else {
+                return View();
+            }
+        }
+       
         public ActionResult Login()
         {
 
@@ -95,6 +100,11 @@ namespace OnlineAuction.Controllers
         }
         [HttpPost]
         public ActionResult Login(User user)
+        {
+
+            return View();
+        }
+        public ActionResult UserProfile()
         {
 
             return View();

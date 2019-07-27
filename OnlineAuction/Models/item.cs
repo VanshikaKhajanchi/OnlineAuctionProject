@@ -5,7 +5,7 @@ using System.Web;
 
 namespace onlineauctionmvc.Models
 {
-    public class item
+    public class Item
     {
 
         public int ItemID { get; set; }

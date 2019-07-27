@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace DALLayer
 {
-    class BidDal
+    public class BidDal
     {
         public bool InsertBid(Bidbal bid)
         {

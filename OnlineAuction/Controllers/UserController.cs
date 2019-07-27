@@ -104,6 +104,7 @@ namespace OnlineAuction.Controllers
 
             return View();
         }
+
         public ActionResult UserProfile()
         {
 

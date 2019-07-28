@@ -7,7 +7,6 @@ namespace onlineauctionmvc.Models
 {
     public class Item
     {
-
         public int ItemID { get; set; }
 
         public string ItemName { get; set; }
@@ -25,10 +24,7 @@ namespace onlineauctionmvc.Models
         public int AuctionID { get; set; }
 
         public int BidID { get; set; }
-
-
-
-    }
+       }
 
 
 }

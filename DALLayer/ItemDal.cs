@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace DALLayer
 {
-    class ItemDal
+  public class ItemDal
     {
 
 

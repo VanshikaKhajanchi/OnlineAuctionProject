@@ -67,7 +67,7 @@ namespace DALLayer
                 SqlCommand cmd = new SqlCommand("sp_UpdateBidTable", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@BidID", bid.BidID);
+               // cmd.Parameters.AddWithValue("@BidID", bid.BidID);
                 cmd.Parameters.AddWithValue("@SellerID", bid.SellerID);
                 cmd.Parameters.AddWithValue("@BuyerID", bid.BuyerID);
                 cmd.Parameters.AddWithValue("@ItemID", bid.ItemID);

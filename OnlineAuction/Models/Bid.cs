@@ -9,15 +9,9 @@ namespace onlineauctionmvc.Models
     {
 
         public int BidID { get; set; }
-
         public int SellerId { get; set; }
-
         public int BuyerID { get; set; }
-
         public int ItemID { get; set; }
-
         public int BidPrice { get; set; }
-
-
     }
 }

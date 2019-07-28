@@ -16,19 +16,15 @@ namespace BALLayerLib
             set {
                 try
                 {
-
                     bidID = value;
                 }
-
                 catch (ArgumentNullException)
                 {
                     throw new ArgumentNullException("null or empty not allowed");
                 }
-
                 catch (FormatException)
                 {
                     throw new FormatException("not correct format");
-
                 }
                 catch (Exception)
                 {

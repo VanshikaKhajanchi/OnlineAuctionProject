@@ -25,7 +25,7 @@ namespace DALLayer
                     SqlCommand cmd = new SqlCommand("sp_InsertAuctionTable", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                   // cmd.Parameters.AddWithValue("@AuctionId", auction.AuctionID);
+                    cmd.Parameters.AddWithValue("@AuctionId", auction.AuctionID);
                     cmd.Parameters.AddWithValue("@AuctionDate",auction.AucDate);
                     cmd.Parameters.AddWithValue("@AuctionTime",auction.AucTime);
                     cmd.Parameters.AddWithValue("@AuctionDuration",auction.AucDuration);
